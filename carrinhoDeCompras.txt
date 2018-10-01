@@ -1,0 +1,26 @@
+package pizza;
+
+
+
+public class CarrinhoDeCompras extends Pizza{
+    
+    public static int valorTot;
+    public static String op;
+    int valortotal(){
+        
+        //if para tratar casos em que a pizza nao tiver ingredientes;
+        if(numeroIngredientes!= 0){
+            
+            CarrinhoDeCompras.valorTot += getPreco();
+            
+        }
+        else{
+            System.out.println("A pizza deve possuir no minimo 1 ingrediente");
+          }
+        
+        
+        return CarrinhoDeCompras.valorTot;
+        
+        }
+	//Criador Walter Dalla Torre Neto.
+}

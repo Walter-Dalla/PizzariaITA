@@ -1,0 +1,60 @@
+package pizza;
+
+import static pizza.HashMapa.map;
+
+public class Principal {
+    
+    static String tresQueijosInredientes[] = {"Gorgonzola", "Cheddar", "Parmesão"};
+    static String MuçarelaInredientes[] = {"molho", "Muçarela"};
+    static String portuguesaingrediente[] = {"ovos","minho","ervilha","queijo","presunto","tomate"};
+    static int cont;
+    
+    public static void main(String[] args) {
+        
+        /* for para "setar" a variavel ingrediente igual a alguma coisa e chamar 
+         *o metodo adicionaIngrediente() para lidar com isto;
+         */
+        CarrinhoDeCompras portuguesa = new CarrinhoDeCompras();
+        for(cont = 0; cont < portuguesaingrediente.length; cont++){
+            
+            portuguesa.ingrediente = portuguesaingrediente[cont];
+            portuguesa.adicionaIngrediente();
+            
+        }
+        
+        /* for para "setar" a variavel ingrediente igual a alguma coisa e chamar 
+         *o metodo adicionaIngrediente() para lidar com isto;
+         */
+        
+        CarrinhoDeCompras Muçarela = new CarrinhoDeCompras();
+        for(cont = 0; cont < MuçarelaInredientes.length; cont++){
+            
+            Muçarela.ingrediente = MuçarelaInredientes[cont];
+            Muçarela.adicionaIngrediente();
+
+        }
+        
+        /* for para "setar" a variavel ingrediente igual a alguma coisa e chamar 
+         *o metodo adicionaIngrediente() para lidar com isto;
+         */
+        
+        
+        CarrinhoDeCompras tresQueijos = new CarrinhoDeCompras();
+        for(cont = 0; cont < tresQueijosInredientes.length; cont++){
+            
+            tresQueijos.ingrediente = tresQueijosInredientes[cont];
+            tresQueijos.adicionaIngrediente();
+           
+        }
+            // chamar o valor total de cada objeto 
+            
+            tresQueijos.valortotal();
+            Muçarela.valortotal();
+        
+        System.out.println("O total do carrinho de compra é: "+portuguesa.valortotal());// obs: a chamada do valor total do objeto portuguesa ja é feito na linha de codigo para que nao comtabilize 2x.
+        System.out.println("os ingredientes utilizados no pedido foram: "+map.keySet());
+        
+        
+    }
+    //Criador Walter Dalla Torre Neto.
+}

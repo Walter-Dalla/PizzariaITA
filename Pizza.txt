@@ -1,0 +1,43 @@
+package pizza;
+
+import static pizza.HashMapa.map;
+public class Pizza {
+    
+    static int ingredientesGastos, i = 0;
+    int numeroIngredientes, preco;
+    String ingrediente;
+
+    
+    void adicionaIngrediente(){
+        /*  ingredientesGastos é statico para que se tenha um parametro com todos os ingredientes.
+         *  numeroIngredientes é para se comtabilizar os ingredientes em uma´unica pizza.
+         */
+        contabilizaIngrediente();
+        ingredientesGastos++;
+        numeroIngredientes++;
+        
+    }
+    
+    int getPreco(){
+        //Calculo do preço de acordo com o numero de ingredientes.
+         
+
+          if (numeroIngredientes < 3){
+           return 15;
+          }
+           else if (numeroIngredientes <= 5){
+            return 20;
+           }
+            else if(numeroIngredientes > 5){
+             return 23;
+            }
+          // este "return 0;" é para o codigo copilar, porem nunca chegara a ser usado.
+    return 0;
+    }
+    
+ 
+     void contabilizaIngrediente(){
+     map.put( ingrediente , i++);
+     }
+	//Criador Walter Dalla Torre Neto.
+}
