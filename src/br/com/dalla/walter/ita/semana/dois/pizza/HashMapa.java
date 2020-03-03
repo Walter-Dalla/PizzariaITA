@@ -1,0 +1,9 @@
+package br.com.dalla.walter.ita.semana.dois.pizza;
+import java.util.HashMap;
+
+public class HashMapa {
+       //hash map com key String e value Integer com o nome "map"
+    static HashMap <String, Integer> map = new HashMap<>();
+    
+	//Criador Walter Dalla Torre Neto.
+}
